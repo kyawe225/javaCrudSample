@@ -1,0 +1,1 @@
+It needs mysql connector jar 8.0.33.

@@ -28,6 +28,7 @@ public class Dashboard {
 					System.out.println("2 : Add New Student");
 					System.out.println("3 : Update Student");
 					System.out.println("4 : Delete Student");
+					System.out.println("5 : Export Student");
 					System.out.println("0 : Back");
 					int list = Integer.parseInt(scanner.nextLine());
 					StudentController student = new StudentController(c,scanner);
@@ -43,6 +44,9 @@ public class Dashboard {
 						break;
 					case 4:
 						student.delete();
+						break;
+					case 5:
+						student.export();
 						break;
 					case 0:
 						menu = -1;

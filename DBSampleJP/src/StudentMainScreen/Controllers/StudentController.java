@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 import Connector.IConnection;
+import ExcelExport.StudentExport;
 
 public class StudentController {
 	private IConnection c;
@@ -109,6 +110,18 @@ public class StudentController {
 			ps.close();
 			c.close();
 		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void export() {
+		StudentExport ex=new StudentExport();
+		try {
+		boolean check=ex.StudentExport();
+		if(check) {
+			System.out.println("Export Successfully");
+		}else
+		System.out.println("Export နော့  Successfully");
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
